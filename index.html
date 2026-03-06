@@ -3,32 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
+<meta name="description" content="Course home page for james kingsley in WDD231">
 <meta name="author" content="James P Kingsley">
-<title>header practice</title>
+<title>WDD231 - Frontend Web Development</title>
 
 <link rel="stylesheet" href="styles/normalize.css">
 <link rel="stylesheet" href="styles/base.css">
 <link rel="stylesheet" href="styles/larger.css">
-
+<script src="scripts/date.js" defer></script>
 <script src="scripts/navigation.js" defer></script>
+<script src="scripts/course.js" defer></script>
 </head>
 
 <body>
 <header>
-    <img src="images/modified-logo.svg" alt="logo image" width="800" height="800">
-    <span>This is a test</span>
+    <img src="images/course-logo.svg" alt="logo image" width="492" height="492">
+    <span>James Kingsley</span>
     <button id="ham-btn" class="hamburger"></button>
 </header>
 <nav id="nav-bar" class="navigation">
-  <ul>
-    <li class="current"><a href="#">News & Events</a></li>
-    <li><a href="#">Dedicated Temples</a></li>
-    <li><a href="#">Announced Temples</a></li>
-  </ul>
+    <ul>
+        <li class="current"><a href="index.html">Home</a></li>
+        <li><a href="#">Chamber Project</a></li>
+        <li><a href="#">Final Project</a></li>
+    </ul>
 </nav>
 <main></main>
 <footer>
+    <p>
+        <span id="currentyear"></span>
+        James Kingsley, WA, USA
+    </p>
+
+    <p id="lastmodified"></p>
     <div class="social-media">
         <a href="https://github.com/charsle3/"><img src="images/icons8-github.svg" alt="Github logo" width="45px"></a>
 
@@ -39,6 +46,3 @@
 </footer>
 </body>
 </html>
-
-
-<!-- figgy -->
