@@ -10,6 +10,10 @@
     margin: 0;
 }
 
+body {
+    font-family: roboto, arial, sans-serif;
+}
+
 /*---------------Header, nav bar (hamburger), footer---------------*/
 
 header {
@@ -78,6 +82,10 @@ nav li {
 
 nav li:last-child {
     border: none;
+}
+
+nav li:hover {
+    background-color: #b7b7b7;
 }
 
 nav a {

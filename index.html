@@ -13,13 +13,17 @@
 <script src="scripts/date.js" defer></script>
 <script src="scripts/navigation.js" defer></script>
 <script src="scripts/course.js" defer></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 <header>
     <img src="images/course-logo.svg" alt="logo image" width="492" height="492">
     <span>James Kingsley</span>
-    <button id="ham-btn" class="hamburger"></button>
+    <button id="ham-btn" class="hamburger">.</button>
 </header>
 <nav id="nav-bar" class="navigation">
     <ul>
@@ -28,14 +32,33 @@
         <li><a href="#">Final Project</a></li>
     </ul>
 </nav>
-<main></main>
-<footer>
-    <p>
-        <span id="currentyear"></span>
-        James Kingsley, WA, USA
-    </p>
+<main>
+    <h1>Home</h1>
 
-    <p id="lastmodified"></p>
+    <section>
+        <h2>About Me</h2>
+        <p>My name is James Kingsley, and I'm the youngest of ten. I was born overseas as my dad was in the Air Force (now retired) and currently live in Spokane WA. I'm a big fan of DnD and fantasy novels, languages, and the occaisional art or craft.</p>
+    </section>
+
+    <section>
+        <h2>Student Photo</h2>
+        <img src="images/profile.webp" alt="Profile pic for James Kingsley" loading="lazy">
+    </section>
+
+    <section>
+        <h2>Web Certificate Courses</h2>
+        <div id="totalcredits"></div>
+        <div class="filters">
+            <span id="allfilter">ALL</span>
+            <span id="csefilter">CSE</span>
+            <span id="wddfilter">WDD</span>
+        </div>
+        <div id="courseList">
+            
+        </div>
+    </section>
+</main>
+<footer>
     <div class="social-media">
         <a href="https://github.com/charsle3/"><img src="images/icons8-github.svg" alt="Github logo" width="45px"></a>
 
@@ -43,6 +66,12 @@
 
         <a href="http://www.youtube.com/@goldengrandeur4639"><img src="images/icons8-youtube.svg" alt="Youtube logo"></a>
     </div>
+    <p>
+        <span id="currentyear"></span>
+        James Kingsley, WA, USA
+    </p>
+
+    <p id="lastmodified"></p>
 </footer>
 </body>
 </html>

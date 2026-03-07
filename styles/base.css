@@ -10,6 +10,10 @@
     margin: 0;
 }
 
+body {
+    font-family: roboto, arial, sans-serif;
+}
+
 /*---------------Header, nav bar (hamburger), footer---------------*/
 
 header {
@@ -36,7 +40,7 @@ header span {
 .hamburger {
     background: none;
     border: none;
-    color: #969696;
+    color: var(--secondary-background);
     cursor: pointer;
     font-size: 2.4rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -44,6 +48,7 @@ header span {
 
 .hamburger::before {
     content: "\2630";
+    color: #969696;
 }
 
 .hamburger.show::before {
@@ -80,7 +85,14 @@ nav li:last-child {
     border: none;
 }
 
+nav li:hover {
+    background-color: #b7b7b7;
+}
+
 nav a {
+    display: block;
+    width: 100%;
+    height: 100%;
     color: navy;
     text-decoration: none;
 }
@@ -109,4 +121,69 @@ footer p {
     margin: 0 auto;
 }
 
-/*-----------------------------------------------------------*/
+/*------------------------section cards-----------------------------------*/
+
+main h1 {
+    text-align: center;
+}
+
+section {
+    margin: .5rem auto;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: var(--primary-background);
+}
+
+section img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+section h2 {
+    display: block;
+    margin: .2rem auto;
+    padding: .4rem;
+    border-radius: 4px;
+    background-color: var(--secondary-background);
+    color: var(--text-color-secondary);
+}
+
+section p {
+    padding: .5rem;
+}
+
+/*------------------------course cards------------------------*/
+
+section div {
+    margin: .5rem auto;
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    column-gap: 2%;
+}
+
+div span {
+    padding: .8rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: var(--secondary-background);
+    color: var(--text-color-secondary);
+}
+
+#courseList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2%;
+    row-gap: 10px;
+}
+
+.completed {
+    background-color: rgb(180, 255, 180);
+    font-style: italic;
+    color: black;
+}
