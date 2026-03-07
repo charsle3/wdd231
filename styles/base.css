@@ -35,6 +35,8 @@ header img {
 header span {
     font-size: x-large;
     color: var(--text-color-secondary);
+    background-color: var(--secondary-background);
+
 }
 
 .hamburger {
