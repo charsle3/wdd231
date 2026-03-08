@@ -86,7 +86,7 @@ nav li:last-child {
     border: none;
 }
 
-nav li:hover {
+nav li:hover, .current {
     background-color: #b7b7b7;
 }
 

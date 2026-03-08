@@ -6,3 +6,25 @@ navButton.addEventListener('click', () => {
 });
 
 const navBar = document.querySelector("#nav-bar");
+
+const home = document.querySelector('#homelink');
+const chamber = document.querySelector('#chamberlink');
+const final = document.querySelector('#finallink');
+
+home.addEventListener('click', () => {
+    home.classList.add("current");
+    chamber.classList.remove("current");
+    final.classList.remove("current");
+});
+
+chamber.addEventListener('click', () => {
+    chamber.classList.add("current");
+    home.classList.remove("current");
+    final.classList.remove("current");
+});
+
+final.addEventListener('click', () => {
+    final.classList.add("current");
+    chamber.classList.remove("current");
+    home.classList.remove("current");
+});
