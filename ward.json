@@ -1,0 +1,11 @@
+{
+    "lastName" : "Kingsley",
+    "date" : "12 september 2025",
+    "size" : 1,
+    "visited" : true,
+    "members" : {
+        "name" : "James",
+        "gender" : "male",
+        "birthday" : "25 August 1995"
+    }
+}
