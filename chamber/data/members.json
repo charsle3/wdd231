@@ -1,0 +1,81 @@
+{
+    "businesses" : [
+        {
+            "name": "Donuts 'R' Us",
+            "address": {
+                "street":"123 dough st.",
+                "city":"Spokane, WA, XXXXX"
+            },
+            "phone": "000-555-1234",
+            "url":"donutsrus.fake.com",
+            "image":"images/donut.webp",
+            "membership":1
+        },
+        {
+            "name": "Muffins and Men",
+            "address": {
+                "street":"456 Drury ln",
+                "city":"Spokane, WA, XXXXX"
+            },
+            "phone": "000-555-1234",
+            "url":"muffinmen.fake.com",
+            "image":"images/muffin.webp",
+            "membership":2
+        },
+        {
+            "name": "Ribs to Die For",
+            "address": {
+                "street":"789 BBQ ct",
+                "city":"Spokane, WA, XXXXX"
+            },
+            "phone": "000-555-1234",
+            "url":"ribdeath.fake.com",
+            "image":"images/ribs.webp",
+            "membership":3
+        },
+        {
+            "name": "Of Mice and Meat",
+            "address": {
+                "street":"123 lenny blvd",
+                "city":"Spokane, WA, XXXXX"
+            },
+            "phone": "000-555-1234",
+            "url":"classics.fake.com",
+            "image":"images/mice.webp",
+            "membership":1
+        },
+        {
+            "name": "Toca del Taco",
+            "address": {
+                "street":"456 texmex ave",
+                "city":"Spokane, WA, XXXXX"
+            },
+            "phone": "000-555-1234",
+            "url":"cilantro.fake.com",
+            "image":"images/taco.webp",
+            "membership":2
+        },
+        {
+            "name": "Hasta la Pasta",
+            "address": {
+                "street":"789 Arnold way",
+                "city":"Spokane, WA, XXXXX"
+            },
+            "phone": "000-555-1234",
+            "url":"actuallyitsvista.fake.com",
+            "image":"images/pasta.webp",
+            "membership":3
+        },
+        {
+            "name": "Burgers and Bandits",
+            "address": {
+                "street":"123 highwaymen hw",
+                "city":"Spokane, WA, XXXXX"
+            },
+            "phone": "000-555-1234",
+            "url":"buns.fake.com",
+            "image":"images/burger.webp",
+            "membership":1
+        }
+    ]
+}
