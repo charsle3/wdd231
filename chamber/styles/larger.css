@@ -33,4 +33,8 @@
     footer div {
         border: none;
     }
+
+    .list article {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }

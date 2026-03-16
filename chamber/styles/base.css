@@ -3,6 +3,7 @@
     --primary-background: #e1b999;
     --secondary-background: #6c533e;
     --text-color-secondary: #e1b999;
+    --highlight-background: #b9987f;
 }
 
 * {
@@ -88,11 +89,11 @@ nav li:last-child {
 }
 
 nav li:hover, .current {
-    background-color: #b9987f;
+    background-color: var(--highlight-background);
 }
 
 nav a {
-    color: #4e3b2c;
+    color: #000000;
     text-decoration: none;
 }
 
@@ -135,11 +136,12 @@ h1 {
     font-style: italic;
 }
 
-.view {
+.viewbuttons {
     text-align: center;
+    margin-bottom: 1rem;
 }
 
-.view span {
+.viewbuttons span {
     padding: .5rem;
     background-color: var(--primary-background);
     border: 1px solid lightgray;
@@ -147,22 +149,53 @@ h1 {
     cursor: pointer;
 }
 
-.grid {
-
+article {
+    text-align: center;
+    background-color: var(--primary-background);
+    margin: 1rem 0;
+    padding: .5rem;
 }
 
-.list {
+article img {
+    border: 1px solid black;
+    border-radius: 20px;
+}
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    column-gap: .5rem;
+}
+
+.list h2 {
+   font-size: 1rem;
+}
+
+.list article {
+    display: grid;
+    grid-template-columns: 50px auto 60px;
+    align-items: center;
+    margin: 0;
+    border-top: none;
+    border-bottom: none;
+}
+
+.list article:nth-child(even) {
+    background-color: var(--highlight-background);
+}
+
+.list img {
+    display: none;
 }
 
 .member {
-    border: 1px solid black;
+    border: 5px solid black;
 }
 
 .silver {
-    border: 3px solid silver;
+    border: 5px solid silver;
 }
 
 .gold {
-    border: 3px solid gold;
+    border: 5px solid gold;
 }
