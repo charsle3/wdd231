@@ -56,7 +56,7 @@ function DisplayBusinesses(businesses) {
         base.appendChild(pic);
         base.appendChild(address);
         base.appendChild(phone);
-        // base.appendChild(url);
+        base.appendChild(url);
 
         businessdisplay.appendChild(base);
     });

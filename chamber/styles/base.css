@@ -157,14 +157,21 @@ article {
     padding: .5rem;
 }
 
+article p:last-child {
+    grid-column: 2 / 3;
+    text-decoration: underline;
+}
+
 article img {
     border: 1px solid black;
     border-radius: 20px;
+    max-width: 90%;
+    height: auto;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     column-gap: .5rem;
 }
 
