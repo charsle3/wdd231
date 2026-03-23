@@ -230,6 +230,7 @@ article img {
     right: 5%;
     max-width: 90%;
     background-color: var(--tertiary-background);
+    color: var(--text-color-secondary); /*only here to get rid of audit color conflict error. otherwise redundant*/
     padding: 1rem;
     border-radius: 20px;
     font-size: 1rem;
