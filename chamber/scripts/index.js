@@ -1,22 +1,14 @@
-const businessdisplay = document.querySelector("#businesses");
-
-const grid = document.querySelector("#grid");
-const list = document.querySelector("#list");
-
-grid.addEventListener('click', () => {
-    businessdisplay.classList.add('grid');
-    businessdisplay.classList.remove('list');
-});
-
-list.addEventListener('click', () => {
-    businessdisplay.classList.add('list');
-    businessdisplay.classList.remove('grid');
-});
+const businessdisplay = document.querySelector("#businessdisplay")
 
 async function GetBusiness() {
     const response = await fetch("data/members.json");
     const data = await response.json();
-    DisplayBusinesses(data.businesses);
+
+    const filteredBusinesses = data.businesses.filter(business => business.membership > 1);
+
+    let finalBusinesses = GetRandomBusiness(filteredBusinesses);
+    
+    DisplayBusinesses(finalBusinesses);
 }
 
 function DisplayBusinesses(businesses) {
@@ -60,6 +52,20 @@ function DisplayBusinesses(businesses) {
 
         businessdisplay.appendChild(base);
     });
+}
+
+function GetRandomBusiness(filteredBusinesses) {
+    let choice1 = Math.floor(Math.random() * (filteredBusinesses.length - 0) + 0);
+    let choice2 = (choice1 + 3) % filteredBusinesses.length
+
+    if (choice1 > choice2) {
+        filteredBusinesses.splice(choice2, choice1 - choice2);
+    }
+    else {
+        filteredBusinesses.slice(choice1, choice2);
+    }
+
+    return filteredBusinesses;
 }
 
 GetBusiness();

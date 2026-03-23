@@ -2,6 +2,7 @@
     box-sizing: border-box;
     --primary-background: #e1b999;
     --secondary-background: #6c533e;
+    --tertiary-background: #4a392c;
     --text-color-secondary: #fbcba4;
     --highlight-background: #b9987f;
 }
@@ -157,7 +158,12 @@ article {
     padding: .5rem;
 }
 
-article p:last-child {
+.forecast p, .currentWeather p {
+    padding: .1rem 0;
+    font-weight: bold;
+}
+
+.businessCards article p:last-child {
     grid-column: 2 / 3;
     text-decoration: underline;
 }
@@ -206,4 +212,44 @@ article img {
 
 .gold {
     border: 5px solid gold;
+}
+
+/*******************************index hero image + content cards***************************************/
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero h2 {
+    position: absolute;
+    bottom: 15%;
+    right: 5%;
+    max-width: 90%;
+    background-color: var(--tertiary-background);
+    padding: 1rem;
+    border-radius: 20px;
+    font-size: 1rem;
+}
+
+.hero h2 a {
+    text-decoration: none;
+    color: var(--text-color-secondary);
+    cursor: pointer;
+}
+
+article h3 {
+    display: block;
+    background-color: var(--secondary-background);
+    color: var(--text-color-secondary);
+    border-radius: 5px;
+    margin-bottom: .5rem;
+}
+
+.dashboard img {
+    width: 30%;
+    height: auto;
 }
