@@ -188,3 +188,42 @@ div span {
     font-style: italic;
     color: black;
 }
+
+/*-------------------------------Modal------------------------*/
+
+dialog {
+  border: 1px solid rgb(0 0 0 / 10%);
+  border-radius: .25rem;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 0 3rem #777;
+  width: 90%;
+  max-width: 600px;
+  top: 30%;
+  left: 30%;
+}
+
+::backdrop {
+  background-color: rgb(0 0 0 / 50%);
+}
+
+dialog button {
+  position: absolute;
+  top: 23px;
+  right: 23px;
+  padding: .5rem 1rem;
+  border: 1px solid rgb(0 0 0 / 10%);
+}
+
+dialog > * {
+    padding-bottom: .5rem;
+}
+
+dialog h2 {
+    background-color: var(--secondary-background);
+    color: var(--text-color-secondary);
+    padding: .5rem;
+    margin-bottom: .2rem;
+    width: 85%;
+    border-radius: .25rem;
+}

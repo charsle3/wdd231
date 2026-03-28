@@ -91,6 +91,10 @@ function DisplayCourses(coursesObject) {
 
         courseCard.innerHTML = `${course.subject} ${course.number}`;
 
+        courseCard.addEventListener('click', function() {
+            displayCourseDetails(course);
+        });
+
         courseList.appendChild(courseCard);
     });
 
@@ -116,5 +120,23 @@ cseCourses.addEventListener('click', function() {
 wddCourses.addEventListener('click', function() {
     DisplayCourses(courses.filter(course => course.subject == 'WDD'));
 });
+
+function displayCourseDetails(course) {
+  courseDetails.innerHTML = '';
+  courseDetails.innerHTML = `
+    <button id="closeModal">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+  `;
+  courseDetails.showModal();
+  
+  closeModal.addEventListener("click", () => {
+    courseDetails.close();
+  });
+}
 
 DisplayCourses(courses);
