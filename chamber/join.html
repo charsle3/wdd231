@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The join page for the Spokane Chamber of Commerce (Fictional)">
+    <meta name="author" content="James P Kingsley">
+    <title>Spokane Chamber of Commerce || Join</title>
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+
+    <meta property="og:description" content="The join page for the Spokane Chamber of Commerce (Fictional)">
+    <meta property="og:image" content="https://charsle3.github.io/wdd231/chamber/images/profile.webp">
+    <meta property="og:title" content="Spokane Chamber of Commerce || Join">
+    <meta property="og:url" content="https://charsle3.github.io/wdd231/chamber/join.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+    <header>
+        <img src="images/chamber-logo.svg" alt="logo image" width="800" height="800">
+        <span>Chamber of Commerce</span>
+        <button id="ham-btn" class="hamburger">.</button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li id="homelink"><a href="index.html">Home</a></li>
+            <li id="discoverlink"><a href="#">Discover</a></li>
+            <li id="directorylink"><a href="directory.html">Business Directory</a></li>
+            <li id="joinlink" class="current"><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="formGrid">
+            <form method="get" action="thanks.html" class="joinForm" onsubmit="SetTimestamp()">
+                <label>First Name 
+                    <input type="text" name="fname" id="fname" title="First Name" autocomplete="given-name" required>
+                </label>
+                <label>Last Name
+                    <input type="text" name="lname" id="lname" title="Last Name" autocomplete="family-name" required>
+                </label>
+                <label>Organizational Title
+                    <input type="text" name="title" id="title" title="7 characters, spaces, letters, hyphens only" autocomplete="organization-title" pattern="[A-Za-z -]{7,}">
+                </label>
+                <label>Email
+                    <input type="email" name="email" id="email" title="Email Address" autocomplete="email" placeholder="johndoe@aol.com" required>
+                </label>
+                <label>Mobile Phone Number
+                    <input type="tel" name="telephone" id="telephone" title="Phone Number" autocomplete="tel" required>
+                </label>
+                <label>Business Name
+                    <input type="text" name="business" id="business" title="Business Name" autocomplete="organization" required>
+                </label>
+                <div class="membershipSelection">
+                    <label for="np" id="membershipTitle">Membership Level</label>
+                    <label><input type="radio" name="membership" id="np" value="np">Non-Profit Organization</label>
+                    <label><input type="radio" name="membership" id="bronze" value="bronze">Bronze Membership</label>
+                    <label><input type="radio" name="membership" id="silver" value="silver">Silver Membership</label>
+                    <label><input type="radio" name="membership" id="gold" value="gold">Gold Membership</label>
+                </div>
+                <label>Business Description
+                    <textarea name="desc" id="desc" title="Business Description"></textarea>
+                </label>
+                <input type="hidden" name="timestamp" id="timestamp">
+                <input type="submit" value="Join" id="joinButton">
+            </form>
+
+            <section class="membershipLevels">
+                <div id="npcard">
+                    <h2>Non-Profit Organization</h2>
+                    <p id="npOpenModal">Learn More</p>
+                </div>
+                <div id="bronzecard">
+                    <h2>Bronze Membership</h2>
+                    <p id="brOpenModal">Learn More</p>
+                </div>
+                <div id="silvercard">
+                    <h2>Silver Membership</h2>
+                    <p id="siOpenModal">Learn More</p>
+                </div>
+                <div id="goldcard">
+                    <h2>Gold Membership</h2>
+                    <p id="goOpenModal">Learn More</p>
+                </div>
+            </section>
+        </section>
+        <dialog id="npModal">
+            <h2>Non - Profit</h2>
+            <p>This membership is reserved for non-profit organizations and is free. Perks include:</p>
+            <ol>
+                <li>Priority event advertisement</li>
+                <li>Free event invitations</li>
+                <li>1 Dollar Shave Club lifetime subscription</li>
+                <li>High fives</li>
+            </ol>
+            <button id="closeNPModal">Close</button>
+        </dialog>
+        <dialog id="brModal">
+            <h2>Bronze Membership</h2>
+            <p>This is the lowest tier membership, and costs 1 starbucks coffee each month. "Perks" include:</p>
+            <ol>
+                <li>A lack of self respect, you poor!</li>
+                <li>Presumably no significant other</li>
+                <li>My disgust</li>
+            </ol>
+            <button id="closeBRModal">Close</button>
+        </dialog>
+        <dialog id="siModal">
+            <h2>Silver Membership</h2>
+            <p>This is the lowest <em>acceptable</em> tier of membership. It costs $100 monthly. Perks include:</p>
+            <ol>
+                <li>Advertisement on the home page highlights section</li>
+                <li>Access to Chamber of Commerce event locations</li>
+                <li>Access to the private washroom</li>
+                <li>Permission to stand close to the gold tier members</li>
+            </ol>
+            <button id="closeSIModal">Close</button>
+        </dialog>
+        <dialog id="goModal">
+            <h2>Gold Membership</h2>
+            <p>The highest tier of membership, gold tier costs one gold - plated cherub every full moon. Perks include:</p>
+            <ol>
+                <li>A rightfully deserved sense of superiority</li>
+                <li>A paintball gun to shoot the poors with</li>
+                <li>A personal butler</li>
+                <li>Free buffet</li>
+            </ol>
+            <button id="closeGOModal">Close</button>
+        </dialog>
+    </main>
+    <footer>
+        <div>
+            <p>
+                <b>Spokane Chamber of Commerce</b>
+            </p>
+            <p>
+                10808 E Sprague Ave
+            </p>
+            <p>
+                Spokane Valley, WA 99206
+            </p>
+            <p>
+                (509) 924-4994
+            </p>
+        </div>
+
+        <div class="social-media">
+            <a href="https://github.com/charsle3/"><img src="images/icons8-github.svg" alt="Github logo" width="45"></a>
+
+            <a href="https://linkedin.com/in/james-kingsley-9278a82a2"><img src="images/icons8-linkedin.svg" alt="linkedIn logo"></a>
+
+            <a href="http://www.youtube.com/@goldengrandeur4639"><img src="images/icons8-youtube.svg" alt="Youtube logo"></a>
+        </div>
+
+        <div>
+            <p>
+                FICTIONAL project || WDD231
+            </p>
+            <p>
+                <span id="currentyear"></span>
+                James Kingsley
+            </p>
+
+            <p id="lastmodified"></p>
+        </div>
+    </footer>
+</body>
+</html>

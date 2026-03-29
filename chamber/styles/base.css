@@ -83,7 +83,7 @@ nav ul {
 
 nav li {
     border-bottom: 1px solid rgba(112, 112, 112, 0.505);
-    padding: .8rem;
+    margin: .8rem;
 }
 
 nav li:last-child {
@@ -95,8 +95,10 @@ nav li:hover, .current {
 }
 
 nav a {
+    display: block;
     color: #000000;
     text-decoration: none;
+    padding: .8rem;
 }
 
 footer {
@@ -254,3 +256,161 @@ article h3 {
     width: 30%;
     height: auto;
 }
+
+/*-------------------------form----------------------------*/
+
+.joinForm {
+    display: flex;
+    flex-direction: column;
+    color: var(--tertiary-background);
+}
+
+.joinForm input, textarea {
+    display: block;
+    width: 99%;
+}
+
+.joinForm label {
+    margin: 3%;
+    padding: 1%;
+    background-color: var(--primary-background);
+    border-radius: 5px;
+}
+
+.membershipSelection label {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    margin-bottom: .5rem;
+}
+
+#membershipTitle {
+    display: block;
+}
+
+#joinButton {
+    margin: 3%;
+    margin-top: 0;
+    max-width: 94%;
+}
+
+.membershipLevels div {
+    display: flex;
+    flex-direction: column;
+    margin: 3%;
+    background-color: var(--primary-background);
+    text-align: center;
+    border: 1px solid black;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    align-items: center;
+}
+
+.membershipLevels h2, .membershipLevels p {
+    margin: 3%;
+}
+
+.membershipLevels p {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: var(--tertiary-background);
+    color: var(--text-color-secondary);
+    max-width: 20%;
+    padding: 1%;
+}
+
+#npcard {
+    animation: nonProfitani 5s infinite alternate;
+}
+
+#bronzecard {
+    animation: bronzeani 5s infinite alternate;
+}
+
+#silvercard {
+    animation: silverani 5s infinite alternate;
+}
+
+#goldcard {
+    animation: goldani 5s infinite alternate;
+}
+
+.response {
+    background-color: var(--primary-background);
+    border-radius: 5px;
+    padding: 3%;
+}
+
+.response p {
+    padding: 1% 0;
+}
+
+/*-----------------------Modals----------------------*/
+
+dialog {
+  width: 80%;
+  height: 300px;
+  left: 4%;
+  top: 10%;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+  padding: 20px;
+  text-align: center;
+}
+
+::backdrop {
+  background-color: #e1b9997d;
+}
+
+dialog ol  {
+    list-style: none;
+}
+
+dialog h2, dialog p, dialog ol {
+    padding: 1%;
+}
+
+dialog button {
+    margin-top: 2%;
+    padding: 1%;
+}
+
+/*---------------------------Animations-------------------------------*/
+
+@keyframes nonProfitani {
+    from {
+        background-color: var(--primary-background);
+    }
+    to {
+        background-color: rgb(255, 216, 223);
+    }
+}
+
+@keyframes bronzeani {
+    from {
+        background-color: var(--primary-background);
+    }
+    to {
+        background-color: rgb(180, 139, 139);
+    }
+}
+
+@keyframes silverani {
+    from {
+        background-color: var(--primary-background);
+    }
+    to {
+        background-color: rgb(207, 207, 207);
+    }
+}
+
+@keyframes goldani {
+    from {
+        background-color: var(--primary-background);
+    }
+    to {
+        background-color: rgb(255, 235, 123);
+    }
+}
+
