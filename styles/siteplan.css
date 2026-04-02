@@ -1,0 +1,26 @@
+:root {
+    --primary-background: #c8f1ff;
+    --secondary-background: #fbced6;
+    --header-color: #00008f;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: roboto, arial, sans-serif;
+}
+
+main {
+    background-color: #c8f1ff;
+}
+
+p {
+    background-color: #fbced6;
+}
+
+h1 {
+    color: #00008f;
+}
