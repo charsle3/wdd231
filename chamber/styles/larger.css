@@ -1,4 +1,4 @@
-@media only screen and (min-width: 38rem) {
+@media only screen and (min-width: 64rem) {
     
     header, main, nav, footer {
         max-width: 900px;
@@ -57,5 +57,19 @@
     .formGrid {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    #places {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2%;
+    }
+
+    #places div {
+        grid-template-areas: 
+        "photo photo name"
+        "photo photo address"
+        "description description description"
+        ". button button";
     }
 }

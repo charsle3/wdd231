@@ -106,7 +106,7 @@ footer {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    padding: .3rem;
+    padding: .3rem 0;
     background-color: var(--secondary-background);
     color: white;
 }
@@ -414,3 +414,70 @@ dialog button {
     }
 }
 
+/*-----------------------------Discover----------------------------*/
+
+#visitDate {
+    font-size: medium;
+    font-style: italic;
+    text-align: center;
+}
+
+#places div {
+    margin: 2% 0;
+    padding: 1% 0;
+    text-align: center;
+    justify-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: var(--primary-background);
+
+    display: grid;
+    grid-template-areas: 
+    "name"
+    "photo"
+    "address"
+    "description"
+    "button";
+}
+
+#places div > * {
+    padding: 1% 0;
+}
+
+#places h2 {
+    color: var(--tertiary-background);
+    grid-area: name;
+}
+
+#places figure {
+    grid-area: photo;
+}
+
+#places img {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 90%;
+}
+
+#places img:hover {
+    box-shadow: 10px 10px 8px #888888;
+}
+
+#places address {
+    grid-area: address;
+}
+
+#places p {
+    max-width: 90%;
+    grid-area: description;
+}
+
+#places button {
+    appearance: none;
+    background-color: var(--secondary-background);
+    color: var(--text-color-secondary);
+    padding: .2rem 0;
+    border-radius: 5px;
+    width: 50%;
+    grid-area: button;
+}
