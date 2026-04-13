@@ -1,0 +1,145 @@
+:root {
+    --primary-background: #c8f1ff;
+    --secondary-background: #fbced6;
+    --header-color: #00008f;
+    --text-color-secondary: #00008f;
+    --highlight-background: #ffb3c1;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: roboto, arial, sans-serif;
+}
+
+/*---------------Header, nav bar (hamburger), footer---------------*/
+
+header {
+    display: grid;
+    grid-template-columns: 40px auto 44px;
+    padding: 5px 0 5px 10px;
+    align-items: center;
+    border-bottom: solid 1px #ddd;
+    column-gap: 8px;
+    background-color: var(--secondary-background);
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+header span {
+    font-size: x-large;
+    color: var(--text-color-secondary);
+    background-color: var(--secondary-background); /*This is redundant -see header rule- but prevents an audit tool color contrast violation*/
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    color: var(--secondary-background);
+    cursor: pointer;
+    font-size: 2.4rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburger::before {
+    content: "\2630";
+    color: var(--text-color-secondary);
+}
+
+.hamburger.show::before {
+    content: "\00d7";
+    color: var(--text-color-secondary);
+
+}
+
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+nav {
+    background-color: var(--primary-background);
+    padding: .3rem;
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    list-style: none;
+}
+
+nav li {
+    border-bottom: 1px solid rgba(112, 112, 112, 0.505);
+    padding: .8rem 0;
+}
+
+nav li:last-child {
+    border: none;
+}
+
+nav li:hover, .current {
+    background-color: var(--highlight-background);
+}
+
+nav a {
+    display: block;
+    color: #000000;
+    text-decoration: none;
+    padding: .8rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: .3rem 0;
+    background-color: var(--secondary-background);
+    color: var(--text-color-secondary);
+}
+
+footer div {
+    padding: .5rem 0;
+}
+
+#lastmodified {
+    color: var(--text-color-secondary);
+    font-style: italic;
+}
+
+h1 {
+    grid-area: title;
+    color: var(--header-color);
+    text-align: center;
+}
+
+#disclaimerModal {
+    text-decoration: underline;
+}
+
+dialog {
+    margin: 0 auto;
+    max-width: 80%;
+    top: 40%;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+::backdrop {
+    background-color: #daf2faa3;
+}

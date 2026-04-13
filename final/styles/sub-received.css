@@ -1,0 +1,20 @@
+section div {
+    padding: .5rem;
+    margin: .5rem 0;
+    background-color: var(--primary-background);
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+h2 {
+    color: var(--header-color);
+    padding: .5rem;
+}
+
+ul {
+    list-style: disc inside;
+}
+
+b {
+    color: var(--header-color);
+}

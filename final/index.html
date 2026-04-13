@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Final Project home page, 'Felis Catus' for WDD231">
+    <meta name="author" content="James P Kingsley">
+    <title>Felis Catus || Home</title>
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/home.css">
+
+    <script type="module" src="scripts/index.mjs"></script>
+
+    <meta property="og:description" content="Final Project 'Felis Catus' for WDD231">
+    <meta property="og:image" content="https://charsle3.github.io/wdd231/chamber/images/profile.webp">
+    <meta property="og:title" content="Felis Catus || Home">
+    <meta property="og:url" content="https://charsle3.github.io/wdd231/final/index.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <img src="images/cat-logo.svg" alt="logo image" width="800" height="800">
+        <span>Felis Catus || Louise Miguel</span>
+        <button id="ham-btn" class="hamburger">.</button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li id="homelink" class="current"><a href="index.html">My Cat</a></li>
+            <li id="factslink"><a href="cat-facts.html">Other Cats</a></li>
+            <li id="jealouslink"><a href="jealous-much.html">Praise My Cat</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Felis Catus</h1>
+        <picture>
+            <source srcset="images/landscape-cat.webp" media="(min-width: 1000px)">
+            <img src="images/portrait-cat.webp" alt="My cat, Louise Miguel" width="500" height="250">
+        </picture>
+        <div class="spot">
+            <h2><em>Ode to Spot</em></h2>
+            <p><em>by Data from Star Trek TNG</em></p>
+            <p class="poem">Felis catus is your taxonomic nomenclature,<br>
+                An endothermic quadruped, carnivorous by nature;<br>
+                Your visual, olfactory, and auditory senses<br>
+                Contribute to your hunting skills and natural defenses.</p>
+            <p class="poem">I find myself intrigued by your subvocal oscillations,<br>
+                A singular development of cat communications<br>
+                That obviates your basic hedonistic predilection<br>
+                For a rhythmic stroking of your fur to demonstrate affection.</p>
+            <p class="poem">A tail is quite essential for your acrobatic talents;<br>
+                You would not be so agile if you lacked its counterbalance.<br>
+                And when not being utilized to aid in locomotion,<br>
+                It often serves to illustrate the state of your emotion.</p>
+            <p class="poem">O Spot, the complex levels of behavior you display<br>
+                Connote a fairly well-developed cognitive array.<br>
+                And though you are not sentient, Spot, and do not comprehend,<br>
+                I nonetheless consider you a true and valued friend.</p>
+        </div>
+        <div class="louise">
+            <h2>Louise Miguel</h2>
+            <p><em><b>Likes:</b></em> His favorite pastimes include staring at passers by, napping in a sunbeam, or napping in front of the heater. When he wants to be pet, he will come over and rub himself across your face.</p>
+            <p><em><b>Dislikes:</b></em> He is not a fan of being picked up, and while he won't freak out, he will get out of your hands as soon as is feasible. He also hates new surroundings, and hides as much as he is able.</p>
+            <p><em><b>Habits:</b></em> Will overeat if allowed to. Tends to sleep on people's legs at night, and will brave unfamiliar environs to do it. Will try to gnaw on your hand, without the pressure to break skin. Just stay still for a bit.</p>
+            <p><em><b>History:</b></em> He was my sister's cat for 6 years until he bit her kids several times (see <em>habits</em> above) and she gave him to me. After 1-2 months, he finally warmed up to me and began sleeping on my legs and in the open. He was named after the Mexican singer because of how much he meows.</p>
+        </div>
+        <dialog id="disclaimer">
+            <h2>DISCLAIMER <span id="closeDisclaimer">❌</span></h2>
+            <p>I created this website as a parody of people that I consider a little <em>too</em> invested in their pets. Please do not take any of my boasting about my cat as my serious opinion, I think of him as a soft roommate that's not nearly as graceful as he seems to think he is.</p>
+        </dialog>
+    </main>
+    <footer>
+        <div>
+            <p>
+                <span id="currentyear"></span>
+                James Kingsley
+            </p>
+
+            <p id="lastmodified"></p>
+            <p><a href="attributions.html">Attributions</a></p>
+            <p id="disclaimerModal">Disclaimer</p>
+        </div>
+    </footer>
+</body>
+</html>

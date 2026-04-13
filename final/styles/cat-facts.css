@@ -1,0 +1,61 @@
+#breedButtons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#breedButtons button {
+    padding: .5rem;
+    background-color: var(--primary-background);
+}
+
+#breedPics img {
+    max-width: 100%;
+}
+
+#breedPics p {
+    padding: .5rem;
+}
+
+#subtitle {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+#breedDetails p {
+    margin: .5rem 0;
+    padding: 0 1rem;
+    border: 1px solid black;
+    background-color: var(--primary-background);
+    border-radius: 10px;
+}
+
+#breedDetails b {
+    color: var(--header-color);
+}
+
+@media only screen and (min-width: 64rem) {
+    #breedButtons {
+        /* display: grid; */
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    #displayArea {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #breedPics {
+        margin: .5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 1%;
+        column-gap: 1%;
+        align-items: center;
+        justify-items: center;
+    }
+
+    #breedPics img {
+        max-height: 200px;
+    }
+}

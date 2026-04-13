@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Final Project jealousy form 'Felis Catus' for WDD231">
+    <meta name="author" content="James P Kingsley">
+    <title>Felis Catus || Jealousy Form</title>
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/jealous.css">
+
+    <script type="module" src="scripts/jealous.mjs" defer></script>
+
+    <meta property="og:description" content="Final Project jealousy form 'Felis Catus' for WDD231">
+    <meta property="og:image" content="https://charsle3.github.io/wdd231/chamber/images/profile.webp">
+    <meta property="og:title" content="Felis Catus || Jealousy Form">
+    <meta property="og:url" content="https://charsle3.github.io/wdd231/final/jealous-much.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <img src="images/cat-logo.svg" alt="logo image" width="800" height="800">
+        <span>Felis Catus || Jealousy Form</span>
+        <button id="ham-btn" class="hamburger">.</button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li id="homelink"><a href="index.html">My Cat</a></li>
+            <li id="factslink"><a href="cat-facts.html">Other Cats</a></li>
+            <li id="jealouslink" class="current"><a href="jealous-much.html">Praise My Cat</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Jealousy Form</h1>
+        <section class="grid-wrap">
+            <form action="sub-received.html" method="get">
+                <fieldset>
+                    <legend><h2>Your Cat</h2></legend>
+                    <h3>Do you have a cat?</h3>
+                    <label>Yes <input type="radio" name="cat-ownership" value="yes" id="cat-yes"></label>
+                    <label>No <input type="radio" name="cat-ownership" value="no" id="cat-no" checked></label>
+
+                    <div id="comparison" class="comparison">
+                        <label>Your cat's name <input type="text" name="name" id="text"></label>
+                        <label>Your cat's breed <input type="text" name="breed" id="breed"></label>
+                        <h3>Is my cat better than your cat?</h3>
+                        <label>Yes <input type="radio" name="superior" value="Yes" id="radio" checked></label>
+                        <label>No <input type="radio" name="superior" value="No" disabled></label>
+
+                        <label>Would you trade your cat for my cat? (you can't)
+                        <select name="trade" id="select">
+                            <option value="" disabled>No</option>
+                            <option value="Yes">Yes</option>
+                            <option value="Absolutely">Absolutely</option>
+                            <option value="Without a Doubt!">Without A Doubt!</option>
+                            <option value="Every Time">Every Time</option>
+                            <option value="Wouldn't even Hesitate">Wouldn't even Hesitate</option>
+                            <option value="No Choice, Really">No Choice, Really</option>
+                        </select>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend><h2>My Cat</h2></legend>
+                    <h3>Do you want to. . .</h3>
+                    <label>Pet my cat? <input type="checkbox" name="pet" id="pet"></label>
+                    <label>Hold my cat? <input type="checkbox" name="hold" id="hold"></label>
+                    <label>Give my cat a scritch? <input type="checkbox" name="scritch" id="scritch"></label>
+                    <label>Hug my cat? <input type="checkbox" name="hug" id="hug"></label>
+                    <label>Feed my cat? <input type="checkbox" name="feed" id="feed"></label>
+                    <label>Snuggle with my cat? <input type="checkbox" name="snuggle" id="snuggle"></label>
+                </fieldset>
+
+                <input type="submit" value="Praise My Cat">
+            </form>
+            <div class="silhouette">
+                <img src="images/leaping.svg" alt="vertical silhouette of cat leaping" loading="lazy">
+            </div>
+        </section>
+        <dialog id="disclaimer">
+            <h2>DISCLAIMER <span id="closeDisclaimer">❌</span></h2>
+            <p>I created this website as a parody of people that I consider a little <em>too</em> invested in their pets. Please do not take any of my boasting about my cat as my serious opinion, I think of him as a soft roommate that's not nearly as graceful as he seems to think he is.</p>
+        </dialog>
+    </main>
+    <footer>
+        <div>
+            <p>
+                <span id="currentyear"></span>
+                James Kingsley
+            </p>
+
+            <p id="lastmodified"></p>
+            <p><a href="attributions.html">Attributions</a></p>
+            <p id="disclaimerModal">Disclaimer</p>
+        </div>
+    </footer>
+</body>
+</html>

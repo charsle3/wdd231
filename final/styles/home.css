@@ -1,0 +1,81 @@
+img {
+    width: 100%;
+    height: auto;
+}
+
+picture {
+    grid-area: image;
+}
+
+.spot {
+    grid-area: spot;
+    text-align: center;
+    background-color: var(--primary-background);
+    border-radius: 10px;
+}
+
+.spot h2 {
+    color: var(--header-color);
+    padding: 1rem 0 0 .2rem;
+}
+
+.poem {
+    font-style: italic;
+    margin: 1.5rem 0;
+    padding: .5rem 0;
+    border: 1px solid var(--secondary-background);
+    border-radius: 10px;
+}
+
+.louise h2 {
+    color: var(--header-color);
+    padding: .5rem;
+}
+
+.louise {
+    grid-area: louise;
+    background-color: var(--primary-background);
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.louise p {
+    padding: .5rem;
+    border: 1px solid var(--secondary-background);
+    border-radius: 10px;
+}
+
+.louise b {
+    color: var(--header-color);
+}
+
+
+@media only screen and (min-width: 64rem) {
+    
+    main {
+        display: grid;
+        grid-template-areas: 
+        "title title"
+        "image image"
+        "spot louise"
+        "spot louise";
+        column-gap: 2%;
+    }
+
+    .poem {
+        padding: .5rem .2rem;
+    }
+
+    .poem:last-child {
+        margin-bottom: 0;
+    }
+
+    .louise {
+        margin-bottom: 0;
+    }
+
+    dialog {
+        left: 4%;
+        top: 10%;
+    }
+}

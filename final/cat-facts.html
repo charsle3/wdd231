@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Final Project cat API 'Felis Catus' for WDD231">
+    <meta name="author" content="James P Kingsley">
+    <title>Felis Catus || Cat Facts</title>
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/cat-facts.css">
+
+    <script type="module" src="scripts/cat-facts.mjs" defer></script>
+
+    <meta property="og:description" content="Final Project cat API 'Felis Catus' for WDD231">
+    <meta property="og:image" content="https://charsle3.github.io/wdd231/chamber/images/profile.webp">
+    <meta property="og:title" content="Felis Catus || Cat Facts">
+    <meta property="og:url" content="https://charsle3.github.io/wdd231/final/cat-facts.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <img src="images/cat-logo.svg" alt="logo image" width="800" height="800">
+        <span>Felis Catus || Cat Facts</span>
+        <button id="ham-btn" class="hamburger">.</button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li id="homelink"><a href="index.html">My Cat</a></li>
+            <li id="factslink" class="current"><a href="cat-facts.html">Other Cats</a></li>
+            <li id="jealouslink"><a href="jealous-much.html">Praise My Cat</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Cat Facts</h1>
+        <p id="subtitle">please select breed</p>
+        <section id="breedButtons"></section>
+        <section id="displayArea">
+            <div id="breedDetails"></div>
+            <div id="breedPics"></div>
+        </section>
+        <dialog id="disclaimer">
+            <h2>DISCLAIMER <span id="closeDisclaimer">❌</span></h2>
+            <p>I created this website as a parody of people that I consider a little <em>too</em> invested in their pets. Please do not take any of my boasting about my cat as my serious opinion, I think of him as a soft roommate that's not nearly as graceful as he seems to think he is.</p>
+        </dialog>
+    </main>
+    <footer>
+        <div>
+            <p>
+                <span id="currentyear"></span>
+                James Kingsley
+            </p>
+
+            <p id="lastmodified"></p>
+            <p><a href="attributions.html">Attributions</a></p>
+            <p id="disclaimerModal">Disclaimer</p>
+        </div>
+    </footer>
+</body>
+</html>
