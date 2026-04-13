@@ -5,16 +5,14 @@ const breedDetails = document.querySelector('#breedDetails');
 
 const catBreedsUrl = "https://api.thecatapi.com/v1/breeds";
 
-
-
 async function GetCatBreeds() {
     try {
         const response = await fetch(catBreedsUrl, {headers: {
-        'x-api-key': apiKey
+            'x-api-key': apiKey
         }});
         if (response.ok) {
-        const data = await response.json();
-        DisplayCatBreeds(data); 
+            const data = await response.json();
+            DisplayCatBreeds(data);
         } else {
             throw Error(await response.text());
         }
@@ -71,11 +69,11 @@ async function GetBreedPics(breedID) {
 
     try {
         const response = await fetch(catBreedImagesurl, {headers: {
-        'x-api-key': apiKey
+            'x-api-key': apiKey
         }});
         if (response.ok) {
-        const data = await response.json();
-        DisplayBreedPics(data); 
+            const data = await response.json();
+            DisplayBreedPics(data); 
         } else {
             throw Error(await response.text());
         }
@@ -103,6 +101,7 @@ function DisplayBreedPics(data){
 }
 
 GetCatBreeds();
+
 if (localStorage.getItem('lastChosenBreed')) {
     DisplayCat(JSON.parse(localStorage.getItem('lastChosenBreed')))
 }
