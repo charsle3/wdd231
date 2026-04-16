@@ -43,7 +43,6 @@ header span {
     background: none;
     background-color: var(--secondary-background);
     border: none;
-    color: var(--secondary-background);
     cursor: pointer;
     font-size: 2.4rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
