@@ -7,7 +7,8 @@ input[type=text], select, label {
     opacity: 0;
     transition: 
         opacity 500ms,
-        display 500ms allow-discrete;   
+        display 500ms;
+    transition-behavior: allow-discrete;   
 }
 
 .showing {
